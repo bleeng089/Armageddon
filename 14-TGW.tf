@@ -23,7 +23,7 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "Private-VPC-Japan-TG-attach" 
 resource "aws_ec2_transit_gateway_peering_attachment" "attachment" { #peer
   transit_gateway_id        = aws_ec2_transit_gateway.Japan-TGW1.id
   peer_transit_gateway_id   = "tgw-0d53c496c3e4003ab"  # Placeholder, replace with actual TGW ID from Brazil
-  peer_account_id           = "381492105256"         # The account ID of the Brazil TGW
+  peer_account_id           = "381492105256"         # The account ID of the Brazil TGW, "peer must be accepted"
   peer_region               = "sa-east-1"
   tags = {
     Name = "Japan-Brazil-Peer"

@@ -12,7 +12,7 @@ data "aws_ami" "latest-amazon-linux-image" {
 }
 
 
-resource "aws_launch_template" "app1-J-Tele-Doctor_LT" {
+resource "aws_launch_template" "app1-J-Tele-Doctor_LT" { # Each EC2 instance hosts the J-Tele-Doctor application and are syslog agents
   name_prefix   = "app1-J-Tele-Doctor_LT"
   image_id      = data.aws_ami.latest-amazon-linux-image.id  
   instance_type = "t2.micro"

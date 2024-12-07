@@ -1,4 +1,4 @@
-resource "aws_instance" "myapp-server" {
+resource "aws_instance" "myapp-server" { #SYSLOG server in private Zone. Logs Agents TCP/UDP port 514 traffic. View traffic via "tail -f /var/log/messages"
     ami = data.aws_ami.latest-amazon-linux-image.id
     instance_type = "t3.micro"
 
